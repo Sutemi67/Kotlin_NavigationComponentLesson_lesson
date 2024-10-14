@@ -44,7 +44,7 @@ class FactFragment : Fragment() {
         }
         binding.nextButton.setOnClickListener {
             findNavController().navigate(
-                R.id.imageFragment,
+                R.id.action_factFragment_to_imageFragment,
                 ImageFragment.createArgs(image)
             )
         }
