@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
@@ -24,7 +25,7 @@ class ImageFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.image.animation =
-            android.view.animation.AnimationUtils.loadAnimation(context, R.anim.fade_in)
+            AnimationUtils.loadAnimation(context, R.anim.fade_in)
         binding.image.animate()
 
         binding.image.setImageResource(

@@ -13,10 +13,10 @@
         <action
             android:id="@+id/action_startFragment_to_factFragment"
             app:destination="@id/factFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_in_left"
-            app:popEnterAnim="@anim/slide_in_right"
-            app:popExitAnim="@anim/slide_in_left" />
+            app:enterAnim="@anim/enter_right_to_center"
+            app:exitAnim="@anim/out_center_to_left"
+            app:popEnterAnim="@anim/enter_left_to_center"
+            app:popExitAnim="@anim/out_center_to_right" />
     </fragment>
     <fragment
         android:id="@+id/factFragment"
@@ -26,21 +26,16 @@
         <action
             android:id="@+id/action_factFragment_to_imageFragment"
             app:destination="@id/imageFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right" />
+            app:enterAnim="@anim/enter_right_to_center"
+            app:exitAnim="@anim/out_center_to_left"
+            app:popEnterAnim="@anim/enter_left_to_center"
+            app:popExitAnim="@anim/out_center_to_right" />
     </fragment>
 
     <fragment
         android:id="@+id/imageFragment"
         android:name="com.aaxample.navigationcomponentlesson.ImageFragment"
         android:label="fragment_image"
-        tools:layout="@layout/fragment_image">
-        <action
-            android:id="@+id/action_factFragment_to_imageFragment"
-            app:destination="@id/imageFragment"
-            app:enterAnim="@anim/slide_in_left"
-            app:exitAnim="@anim/slide_out_right"/>
-    </fragment>
+        tools:layout="@layout/fragment_image" />
+
 </navigation>
