@@ -23,6 +23,10 @@ class ImageFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.image.animation =
+            android.view.animation.AnimationUtils.loadAnimation(context, R.anim.fade_in)
+        binding.image.animate()
+
         binding.image.setImageResource(
             requireArguments().getInt(IMAGE_PARAM)
         )
@@ -30,7 +34,7 @@ class ImageFragment : Fragment() {
             findNavController().navigateUp()
         }
         binding.goToStartButton.setOnClickListener {
-            findNavController().popBackStack(R.id.startFragment,false)
+            findNavController().popBackStack(R.id.startFragment, false)
         }
     }
 

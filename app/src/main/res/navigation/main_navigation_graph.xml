@@ -9,23 +9,38 @@
         android:id="@+id/startFragment"
         android:name="com.aaxample.navigationcomponentlesson.StartFragment"
         android:label="fragment_start"
-        tools:layout="@layout/fragment_start" >
+        tools:layout="@layout/fragment_start">
         <action
             android:id="@+id/action_startFragment_to_factFragment"
-            app:destination="@id/factFragment" />
+            app:destination="@id/factFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_in_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_in_left" />
     </fragment>
     <fragment
         android:id="@+id/factFragment"
         android:name="com.aaxample.navigationcomponentlesson.FactFragment"
         android:label="fragment_fact"
-        tools:layout="@layout/fragment_fact" >
+        tools:layout="@layout/fragment_fact">
         <action
             android:id="@+id/action_factFragment_to_imageFragment"
-            app:destination="@id/imageFragment" />
+            app:destination="@id/imageFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
+
     <fragment
         android:id="@+id/imageFragment"
         android:name="com.aaxample.navigationcomponentlesson.ImageFragment"
         android:label="fragment_image"
-        tools:layout="@layout/fragment_image" />
+        tools:layout="@layout/fragment_image">
+        <action
+            android:id="@+id/action_factFragment_to_imageFragment"
+            app:destination="@id/imageFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"/>
+    </fragment>
 </navigation>
